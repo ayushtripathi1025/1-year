@@ -24,7 +24,7 @@ const SITE_CONFIG = {
          * true  = testing features are available
          * false = production behaviour
          */
-        TEST_MODE: true,
+        TEST_MODE: false,
 
         /*
          * Skip the midnight lock while testing.
@@ -34,7 +34,7 @@ const SITE_CONFIG = {
          *
          * Keep TEST_MODE = true when using this.
          */
-        FORCE_UNLOCK: true,
+        FORCE_UNLOCK: false,
 
         /*
          * Show useful debug information in the browser console.
