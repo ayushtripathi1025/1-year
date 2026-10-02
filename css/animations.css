@@ -1,0 +1,605 @@
+/* ============================================================
+   OUR ANNIVERSARY
+   Animation system
+   Soft • Romantic • Cute • Minimal
+   ============================================================ */
+
+
+/* ------------------------------------------------------------
+   01. REUSABLE KEYFRAMES
+   ------------------------------------------------------------ */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.94);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes softFloat {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes softFloatLeft {
+    0%,
+    100% {
+        transform: translateY(0) rotate(-5deg);
+    }
+
+    50% {
+        transform: translateY(-8px) rotate(-5deg);
+    }
+}
+
+@keyframes softFloatRight {
+    0%,
+    100% {
+        transform: translateY(0) rotate(5deg);
+    }
+
+    50% {
+        transform: translateY(-8px) rotate(5deg);
+    }
+}
+
+@keyframes heartbeat {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    15% {
+        transform: scale(1.06);
+    }
+
+    30% {
+        transform: scale(1);
+    }
+
+    45% {
+        transform: scale(1.04);
+    }
+}
+
+@keyframes pulseSoft {
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.55;
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% center;
+    }
+
+    100% {
+        background-position: 200% center;
+    }
+}
+
+@keyframes countdownPop {
+    0% {
+        opacity: 0.35;
+        transform: scale(0.94);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.03);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* ------------------------------------------------------------
+   02. INITIAL PAGE LOAD
+   ------------------------------------------------------------ */
+
+.site-lock .lock-content {
+    animation:
+        fadeUp 900ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.lock-cat {
+    animation:
+        softFloat 3.5s ease-in-out infinite;
+}
+
+.lock-content .eyebrow {
+    animation:
+        fadeUp 700ms 120ms ease both;
+}
+
+.lock-content h1 {
+    animation:
+        fadeUp 700ms 220ms ease both;
+}
+
+.lock-message {
+    animation:
+        fadeUp 700ms 320ms ease both;
+}
+
+.unlock-countdown {
+    animation:
+        fadeUp 700ms 420ms ease both;
+}
+
+.lock-footer {
+    animation:
+        fadeUp 700ms 520ms ease both;
+}
+
+
+/* ------------------------------------------------------------
+   03. HERO
+   ------------------------------------------------------------ */
+
+.hero-text {
+    animation:
+        fadeUp 900ms 200ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hero-cat-left {
+    animation:
+        softFloatLeft 4s ease-in-out infinite;
+}
+
+.hero-cat-right {
+    animation:
+        softFloatRight 4.4s ease-in-out infinite;
+}
+
+.hero-tagline {
+    animation:
+        fadeUp 800ms 500ms ease both;
+}
+
+
+/* ------------------------------------------------------------
+   04. SECTION INTRO ANIMATION HELPERS
+   ------------------------------------------------------------ */
+
+.section.is-visible .eyebrow {
+    animation:
+        fadeDown 650ms ease both;
+}
+
+.section.is-visible h2 {
+    animation:
+        fadeUp 700ms 100ms ease both;
+}
+
+.section.is-visible .section-intro {
+    animation:
+        fadeUp 700ms 180ms ease both;
+}
+
+
+/* ------------------------------------------------------------
+   05. RELATIONSHIP TIMER
+   ------------------------------------------------------------ */
+
+.relationship-section .time-card {
+    transition:
+        transform 300ms ease,
+        box-shadow 300ms ease,
+        border-color 300ms ease;
+}
+
+.relationship-section .time-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-border-gold);
+    box-shadow: var(--shadow-soft);
+}
+
+.infinity-message {
+    animation:
+        pulseSoft 3.5s ease-in-out infinite;
+}
+
+
+/* ------------------------------------------------------------
+   06. US EQUATION
+   ------------------------------------------------------------ */
+
+.person-card {
+    transition:
+        transform 350ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.person-card:hover {
+    transform: translateY(-6px);
+}
+
+.us-card .photo-placeholder {
+    transition:
+        box-shadow 350ms ease,
+        border-color 350ms ease;
+}
+
+.us-card:hover .photo-placeholder {
+    border-color: var(--color-gold);
+    box-shadow:
+        0 12px 38px rgba(216, 184, 120, 0.14);
+}
+
+.equation-symbol {
+    animation:
+        pulseSoft 3s ease-in-out infinite;
+}
+
+
+/* ------------------------------------------------------------
+   07. PHOTO PLACEHOLDERS
+   ------------------------------------------------------------ */
+
+.photo-placeholder {
+    position: relative;
+}
+
+.photo-placeholder::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            110deg,
+            transparent 20%,
+            rgba(255, 255, 255, 0.32) 45%,
+            transparent 70%
+        );
+
+    background-size: 200% 100%;
+
+    opacity: 0;
+    pointer-events: none;
+}
+
+.photo-placeholder:hover::after {
+    opacity: 1;
+    animation:
+        shimmer 1.2s ease;
+}
+
+
+/* ------------------------------------------------------------
+   08. BUTTONS
+   ------------------------------------------------------------ */
+
+.button,
+.icon-button {
+    will-change: transform;
+}
+
+.primary-button:not(:disabled) {
+    transition:
+        transform 180ms ease,
+        box-shadow 180ms ease,
+        background 180ms ease;
+}
+
+.primary-button:not(:disabled):hover {
+    transform: translateY(-2px);
+}
+
+.primary-button:not(:disabled):active {
+    transform: translateY(1px) scale(0.98);
+}
+
+.secondary-button:hover:not(:disabled) {
+    transform: translateY(-2px);
+}
+
+.icon-button:hover {
+    transform: translateY(-2px) rotate(-2deg);
+}
+
+.icon-button:active {
+    transform: scale(0.94);
+}
+
+
+/* ------------------------------------------------------------
+   09. PUZZLE
+   ------------------------------------------------------------ */
+
+.puzzle-board {
+    transition:
+        box-shadow 400ms ease,
+        transform 400ms ease;
+}
+
+.puzzle-board:hover {
+    box-shadow:
+        0 18px 48px rgba(77, 39, 55, 0.10);
+}
+
+.puzzle-piece {
+    transition:
+        transform 180ms ease,
+        filter 180ms ease,
+        opacity 180ms ease;
+}
+
+.puzzle-piece:hover {
+    filter: brightness(1.04);
+}
+
+.puzzle-piece.is-correct {
+    animation:
+        scaleIn 260ms ease both;
+}
+
+.puzzle-game.is-complete .puzzle-board {
+    animation:
+        scaleIn 500ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+
+/* ------------------------------------------------------------
+   10. CROSSWORD
+   ------------------------------------------------------------ */
+
+.crossword-board,
+.crossword-questions {
+    animation:
+        fadeUp 700ms ease both;
+}
+
+.crossword-cell {
+    transition:
+        background 180ms ease,
+        border-color 180ms ease,
+        transform 180ms ease;
+}
+
+.crossword-cell:focus-within {
+    transform: scale(1.03);
+}
+
+
+/* ------------------------------------------------------------
+   11. MEMORY SLIDESHOW
+   ------------------------------------------------------------ */
+
+.memory-media {
+    transition:
+        box-shadow 400ms ease,
+        transform 400ms ease;
+}
+
+.memory-media:hover {
+    box-shadow:
+        0 18px 52px rgba(77, 39, 55, 0.10);
+}
+
+.memory-media.is-changing {
+    animation:
+        fadeIn 350ms ease both;
+}
+
+.memory-caption.is-changing {
+    animation:
+        fadeUp 350ms ease both;
+}
+
+
+/* ------------------------------------------------------------
+   12. SONG CARDS
+   ------------------------------------------------------------ */
+
+.song-card {
+    transition:
+        transform 350ms cubic-bezier(0.22, 1, 0.36, 1),
+        box-shadow 350ms ease,
+        border-color 350ms ease;
+}
+
+.song-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-border-gold);
+    box-shadow: var(--shadow-soft);
+}
+
+
+/* ------------------------------------------------------------
+   13. MONTH CARDS
+   ------------------------------------------------------------ */
+
+.month-card {
+    will-change: transform;
+}
+
+.month-card img {
+    transition:
+        transform 500ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.month-card:hover img {
+    transform: scale(1.035);
+}
+
+
+/* ------------------------------------------------------------
+   14. SURPRISE
+   ------------------------------------------------------------ */
+
+.surprise-button {
+    animation:
+        heartbeat 3.2s ease-in-out infinite;
+}
+
+.surprise-button:hover {
+    animation-play-state: paused;
+}
+
+.surprise-panel:not(.hidden) {
+    animation:
+        scaleIn 600ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.surprise-message {
+    animation:
+        fadeUp 600ms ease both;
+}
+
+.surprise-countdown {
+    animation:
+        countdownPop 700ms ease both;
+}
+
+.surprise-final-message {
+    animation:
+        scaleIn 900ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+
+/* ------------------------------------------------------------
+   15. FOOTER
+   ------------------------------------------------------------ */
+
+.site-footer {
+    transition:
+        background 400ms ease;
+}
+
+
+/* ------------------------------------------------------------
+   16. SCROLL REVEAL BASE
+   JS will add .is-visible to sections when appropriate.
+   ------------------------------------------------------------ */
+
+.section:not(.is-visible) .section-container {
+    /* Keep content visible by default for accessibility and
+       graceful fallback when JavaScript is unavailable. */
+}
+
+.section.is-visible .person-card,
+.section.is-visible .time-card,
+.section.is-visible .month-card,
+.section.is-visible .song-card {
+    animation:
+        fadeUp 650ms ease both;
+}
+
+
+/* ------------------------------------------------------------
+   17. STAGGERED CARD ANIMATION
+   ------------------------------------------------------------ */
+
+.section.is-visible .time-card:nth-child(2),
+.section.is-visible .person-card:nth-child(2),
+.section.is-visible .month-card:nth-child(2),
+.section.is-visible .song-card:nth-child(2) {
+    animation-delay: 70ms;
+}
+
+.section.is-visible .time-card:nth-child(3),
+.section.is-visible .person-card:nth-child(3),
+.section.is-visible .month-card:nth-child(3),
+.section.is-visible .song-card:nth-child(3) {
+    animation-delay: 140ms;
+}
+
+.section.is-visible .time-card:nth-child(4),
+.section.is-visible .month-card:nth-child(4),
+.section.is-visible .song-card:nth-child(4) {
+    animation-delay: 210ms;
+}
+
+.section.is-visible .time-card:nth-child(5),
+.section.is-visible .month-card:nth-child(5),
+.section.is-visible .song-card:nth-child(5) {
+    animation-delay: 280ms;
+}
+
+.section.is-visible .time-card:nth-child(6),
+.section.is-visible .month-card:nth-child(6),
+.section.is-visible .song-card:nth-child(6) {
+    animation-delay: 350ms;
+}
+
+
+/* ------------------------------------------------------------
+   18. REDUCED MOTION
+   ------------------------------------------------------------ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .lock-cat,
+    .hero-cat-left,
+    .hero-cat-right,
+    .infinity-message,
+    .equation-symbol,
+    .surprise-button {
+        animation: none !important;
+    }
+
+    .section.is-visible .eyebrow,
+    .section.is-visible h2,
+    .section.is-visible .section-intro,
+    .section.is-visible .person-card,
+    .section.is-visible .time-card,
+    .section.is-visible .month-card,
+    .section.is-visible .song-card {
+        animation: none !important;
+    }
+}

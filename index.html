@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Mobile-first viewport -->
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Celebrating us, our memories, and everything still to come."
+    >
+
+    <title>Celebrating Us ♡</title>
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Responsive stylesheet -->
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Animation stylesheet -->
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+
+<body>
+
+    <!-- =========================================================
+         PAGE LOCK / COUNTDOWN OVERLAY
+         Shown before October 3, 2026 at 12:00 AM.
+         ========================================================= -->
+    <div
+        id="site-lock"
+        class="site-lock"
+        aria-hidden="false"
+    >
+        <div class="lock-content">
+
+            <div class="lock-cat" aria-hidden="true">
+                🐱
+            </div>
+
+            <p class="eyebrow">
+                OUR STORY
+            </p>
+
+            <h1>
+                Unlocks at midnight ♡
+            </h1>
+
+            <p class="lock-message">
+                Something special is waiting for you.
+            </p>
+
+            <div
+                id="unlock-countdown"
+                class="unlock-countdown"
+                aria-live="polite"
+            >
+                <div class="countdown-unit">
+                    <span id="countdown-days">00</span>
+                    <small>DAYS</small>
+                </div>
+
+                <div class="countdown-separator">:</div>
+
+                <div class="countdown-unit">
+                    <span id="countdown-hours">00</span>
+                    <small>HOURS</small>
+                </div>
+
+                <div class="countdown-separator">:</div>
+
+                <div class="countdown-unit">
+                    <span id="countdown-minutes">00</span>
+                    <small>MINUTES</small>
+                </div>
+
+                <div class="countdown-separator">:</div>
+
+                <div class="countdown-unit">
+                    <span id="countdown-seconds">00</span>
+                    <small>SECONDS</small>
+                </div>
+            </div>
+
+            <p class="lock-footer">
+                Come back when the clock says it's time. ♡
+            </p>
+
+        </div>
+    </div>
+
+
+    <!-- =========================================================
+         MAIN WEBSITE
+         ========================================================= -->
+    <main
+        id="main-site"
+        class="main-site"
+        aria-hidden="true"
+    >
+
+        <!-- =====================================================
+             01. HERO
+             ===================================================== -->
+        <section
+            id="hero"
+            class="section hero-section"
+        >
+            <div class="hero-content">
+
+                <div class="hero-cat hero-cat-left" aria-hidden="true">
+                    🐱
+                </div>
+
+                <div class="hero-text">
+
+                    <p class="eyebrow">
+                        A LITTLE CELEBRATION OF US
+                    </p>
+
+                    <h1>
+                        Celebrating 1 Year
+                    </h1>
+
+                    <p class="hero-subtitle">
+                        well... more than 1 ♡
+                    </p>
+
+                    <p class="hero-tagline">
+                        My favourite Baddie.
+                    </p>
+
+                </div>
+
+                <div class="hero-cat hero-cat-right" aria-hidden="true">
+                    🐱
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- =====================================================
+             02. RELATIONSHIP TIMER
+             ===================================================== -->
+        <section
+            id="relationship"
+            class="section relationship-section"
+        >
+            <div class="section-container">
+
+                <p class="eyebrow">
+                    SINCE TOGETHER
+                </p>
+
+                <h2>
+                    And still counting...
+                </h2>
+
+                <p class="section-intro">
+                    Since January 10, 2025 ♡
+                </p>
+
+                <div
+                    id="relationship-timer"
+                    class="relationship-timer"
+                    aria-live="polite"
+                >
+
+                    <div class="time-card">
+                        <span id="relationship-years">0</span>
+                        <small>YEARS</small>
+                    </div>
+
+                    <div class="time-card">
+                        <span id="relationship-months">0</span>
+                        <small>MONTHS</small>
+                    </div>
+
+                    <div class="time-card">
+                        <span id="relationship-days">0</span>
+                        <small>DAYS</small>
+                    </div>
+
+                    <div class="time-card">
+                        <span id="relationship-hours">0</span>
+                        <small>HOURS</small>
+                    </div>
+
+                    <div class="time-card">
+                        <span id="relationship-minutes">0</span>
+                        <small>MINUTES</small>
+                    </div>
+
+                    <div class="time-card">
+                        <span id="relationship-seconds">0</span>
+                        <small>SECONDS</small>
+                    </div>
+
+                </div>
+
+                <p class="infinity-message">
+                    Since together ♡ Till infinity.
+                </p>
+
+            </div>
+        </section>
+
+
+        <!-- =====================================================
+             03. MINI YOU + MINE ME = US
+             ===================================================== -->
+        <section
+            id="us"
+            class="section us-section"
+        >
+            <div class="section-container">
+
+                <p class="eyebrow">
+                    THE EQUATION
+                </p>
+
+                <h2>
+                    Mini You + Mine Me = Us
+                </h2>
+
+                <div class="us-equation">
+
+                    <div class="person-card">
+                        <div
+                            class="photo-placeholder"
+                            id="mini-you-photo"
+                        >
+                            MINI YOU PHOTO
+                        </div>
+
+                        <h3>
+                            MINI YOU
+                        </h3>
+                    </div>
+
+                    <div
+                        class="equation-symbol"
+                        aria-hidden="true"
+                    >
+                        +
+                    </div>
+
+                    <div class="person-card">
+                        <div
+                            class="photo-placeholder"
+                            id="mine-me-photo"
+                        >
+                            MINE ME PHOTO
+                        </div>
+
+                        <h3>
+                            MINE ME
+                        </h3>
+                    </div>
+
+                    <div
+                        class="equation-symbol"
+                        aria-hidden="true"
+                    >
+                        =
+                    </div>
+
+                    <div class="person-card us-card">
+
+                        <div
+                            class="photo-placeholder"
+                            id="us-photo"
+                        >
+                            US PHOTO
+                        </div>
+
+                        <h3>
+                            US ♡
+                        </h3>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- =====================================================
+             04. PUZZLE
+             ===================================================== -->
+        <section
+            id="puzzle"
+            class="section puzzle-section"
+        >
+            <div class="section-container">
+
+                <p class="eyebrow">
+                    FIRST CHALLENGE
+                </p>
+
+                <h2>
+                    Put Us Back Together
+                </h2>
+
+                <p class="section-intro">
+                    One photo. A few pieces.
+                    Let's see if you can find us again. ♡
+                </p>
+
+                <div
+                    id="puzzle-game"
+                    class="puzzle-game"
+                >
+                    <div
+                        id="puzzle-board"
+                        class="puzzle-board"
+                        aria-label="Photo puzzle"
+                    >
+                        <!-- Puzzle pieces will be generated by puzzle.js -->
+                    </div>
+
+                    <div class="puzzle-controls">
+
+                        <p id="puzzle-status">
+                            Complete the puzzle to continue.
+                        </p>
+
+                        <button
+                            id="puzzle-reset"
+                            class="button secondary-button"
+                            type="button"
+                        >
+                            Shuffle Again
+                        </button>
+
+                    </div>
+                </div>
+
+                <button
+                    id="puzzle-continue"
+                    class="button primary-button"
+                    type="button"
+                    disabled
+                >
+                    Continue ♡
+                </button>
+
+            </div>
+        </section>
+
+
+        <!-- =====================================================
+             05. CROSSWORD
+             ===================================================== -->
+        <section
+  id="crossword"
+  class="section crossword-section"
+>
+  <div class="section-inner">
+
+    <div class="section-heading">
+      <p class="section-kicker">
+        A Little Challenge ♡
+      </p>
+
+      <h2>
+        How Well Do You Know Us?
+      </h2>
+
+      <p class="section-description">
+        A few little questions about our story.
+        No pressure… you should know these. 🤭
+      </p>
+    </div>
+
+
+    <div class="crossword-card">
+
+      <div class="crossword-top">
+
+        <div>
+          <p
+            id="crossword-status"
+            class="crossword-status"
+            aria-live="polite"
+          >
+            Loading our little crossword...
+          </p>
+
+          <p
+            id="crossword-attempts"
+            class="crossword-attempts"
+          >
+            Wrong attempts: 0
+          </p>
+        </div>
+
+      </div>
+
+
+      <div
+        id="crossword-board"
+        class="crossword-board"
+      >
+        <!-- Questions are generated by crossword.js -->
+      </div>
+
+
+      <div
+        id="crossword-hint"
+        class="crossword-hint-box"
+        aria-live="polite"
+      ></div>
+
+
+      <div
+        id="crossword-reveal"
+        class="crossword-reveal-box"
+        aria-live="polite"
+      ></div>
+
+
+      <div class="crossword-bottom">
+
+        <p class="crossword-bottom-text">
+        </p>
+
+        <button
+          id="crossword-continue"
+          class="primary-button"
+          type="button"
+          disabled
+          aria-disabled="true"
+        >
+          Continue ♡
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+        <!-- =====================================================
+             06. MEMORY SLIDESHOW
+             ===================================================== -->
+        <section
+            id="memories"
+            class="section memories-section"
+        >
+            <div class="section-container">
+
+                <p class="eyebrow">
+                    OUR LITTLE ARCHIVE
+                </p>
+
+                <h2>
+                    A Few Of My Favourite Memories
+                </h2>
+
+                <div
+                    id="memory-slideshow"
+                    class="memory-slideshow"
+                >
+
+                    <div
+                        id="memory-media"
+                        class="memory-media"
+                    >
+                        <!-- Image/video generated by memories.js -->
+                    </div>
+
+                    <div
+                        id="memory-caption"
+                        class="memory-caption"
+                    >
+                        <!-- Caption generated by memories.js -->
+                    </div>
+
+                    <div class="slideshow-controls">
+
+                        <button
+                            id="memory-previous"
+                            class="icon-button"
+                            type="button"
+                            aria-label="Previous memory"
+                        >
+                            ←
+                        </button>
+
+                        <span
+                            id="memory-counter"
+                            class="memory-counter"
+                        >
+                            0 / 0
+                        </span>
+
+                        <button
+                            id="memory-next"
+                            class="icon-button"
+                            type="button"
+                            aria-label="Next memory"
+                        >
+                            →
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- =====================================================
+             07. SONGS
+             ===================================================== -->
+        <section
+            id="songs"
+            class="section songs-section"
+        >
+            <div class="section-container">
+
+                <p class="eyebrow">
+                    A LITTLE SOUNDTRACK
+                </p>
+
+                <h2>
+                    Songs That Remind Me Of You
+                </h2>
+
+                <p class="section-intro">
+                    Press play when you're ready. 🎵
+                </p>
+
+                <div
+                    id="songs-list"
+                    class="songs-list"
+                >
+                    <!-- YouTube song cards generated by songs.js -->
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- =====================================================
+             09. FINAL SURPRISE
+             ===================================================== -->
+        <section
+            id="surprise"
+            class="section surprise-section"
+        >
+            <div class="section-container">
+
+                <p class="eyebrow">
+                    ONE LAST THING
+                </p>
+
+                <h2>
+                    I Have A Question...
+                </h2>
+
+                <button
+                    id="surprise-start"
+                    class="button primary-button surprise-button"
+                    type="button"
+                >
+                    One Last Thing ♡
+                </button>
+
+
+                <!-- Question -->
+                <div
+                    id="surprise-question"
+                    class="surprise-panel hidden"
+                >
+
+                    <p class="surprise-question-text">
+                        Are you with him right now?
+                    </p>
+
+                    <div class="surprise-options">
+
+                        <button
+                            id="surprise-yes"
+                            class="button primary-button"
+                            type="button"
+                        >
+                            Yes ❤️
+                        </button>
+
+                        <button
+                            id="surprise-no"
+                            class="button secondary-button"
+                            type="button"
+                        >
+                            No 😭
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- YES result -->
+                <div
+                    id="surprise-yes-result"
+                    class="surprise-panel hidden"
+                >
+
+                    <p class="surprise-message">
+                        Okay...
+                    </p>
+
+                    <p class="surprise-message">
+                        Close your eyes.
+                    </p>
+
+                    <p class="surprise-message">
+                        Seriously.
+                    </p>
+
+                    <p class="surprise-message small-message">
+                        Don't cheat. 👀
+                    </p>
+
+                    <div
+                        id="surprise-countdown"
+                        class="surprise-countdown"
+                        aria-live="polite"
+                    >
+                        5
+                    </div>
+
+                    <div
+                        id="surprise-final-message"
+                        class="surprise-final-message hidden"
+                    >
+                        You can open them now. ❤️
+                    </div>
+
+                </div>
+
+
+                <!-- NO result -->
+                <div
+                    id="surprise-no-result"
+                    class="surprise-panel hidden"
+                >
+
+                    <p class="surprise-message">
+                        Hawwww 😭
+                    </p>
+
+                    <p class="surprise-message">
+                        Still not together?
+                    </p>
+
+                    <p class="surprise-message">
+                        Get him on the phone.
+                    </p>
+
+                    <p class="surprise-message">
+                        Tell him to come.
+                    </p>
+
+                    <p class="surprise-message highlight-message">
+                        Your surprise is waiting. ♡
+                    </p>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- =====================================================
+             FOOTER
+             ===================================================== -->
+        <footer class="site-footer">
+
+            <p>
+                Made with love, memories & a little bit of chaos. ♡
+            </p>
+
+            <p class="footer-year">
+                2025 → ∞
+            </p>
+
+        </footer>
+
+    </main>
+
+
+    <!-- =========================================================
+         JAVASCRIPT
+         Loaded at the end so the HTML exists before scripts run.
+         ========================================================= -->
+
+    <script src="js/config.js"></script>
+
+    <script src="js/countdown.js"></script>
+    <script src="js/relationship.js"></script>
+    <script src="js/puzzle.js"></script>
+    <script src="js/us.js"></script>
+
+    <!-- Crossword data must load BEFORE crossword logic -->
+    <script src="data/questions.js"></script>
+    <script src="js/questions.js"></script>
+
+    <script src="data/memories.js"></script>
+    <script src="js/memories.js"></script>
+
+    <script src="data/songs.js"></script>
+    <script src="js/songs.js"></script>
+
+    <script src="js/final-suprise.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+</html>
+```
